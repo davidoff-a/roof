@@ -35,3 +35,57 @@
     }
   }
 }
+
+.chats{
+  width: 160px;
+  height: 75px;
+  &__label{
+    width: 127px;
+    padding-left: 15px;
+    position: relative;
+    font-size: 12px;
+    line-height: 10px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    & span{
+      font-weight: 700;
+    }
+    &:before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 100%;
+      background-color: $btn-green;
+    }
+  }
+  &__wrapper{
+    width: 100%;
+  }
+  &__img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &__messenger{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    text-align: center;
+    align-content: center;
+    &_viber{
+      background-color: $btn-viber;
+    }
+    &_whatsup{
+      background-color: $btn-whatsup;
+    }
+    &_telegram{
+      background-color: $btn-telegram;
+    }
+  }
+}
