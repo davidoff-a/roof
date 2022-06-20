@@ -1,5 +1,4 @@
 export function isWebp() {
-    console.log("Fucking bitch!!!")
   function testWebP(callback) {
     let webP = new Image();
     webP.onload = webP.onerror = function () {
@@ -10,7 +9,6 @@ export function isWebp() {
   }
   testWebP(function (support) {
     let className = support === true ? "webp" : "no-webp";
-    console.log(className);
     document.documentElement.classList.add(className);
   });
 }
