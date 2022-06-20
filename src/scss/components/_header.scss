@@ -18,6 +18,32 @@
     }
   }
 }
+
+.price{
+  position: relative;
+  padding-left: 60px;
+  &__link{
+      border-bottom: 4px $btn-green dotted;
+  }
+  &:before{
+    content: "Pdf";
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transform:translateY(-50%);
+    text-align: center;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 43px;
+    letter-spacing: 0.04em;
+    color: $btn-green;
+
+  }
+}
 .nav {
   padding-right: 25px;
   margin-bottom: 37px;
