@@ -1,0 +1,26 @@
+body{
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 140%;
+}
+.container{
+  width:82vw;
+  margin: 0 auto;
+  &__grid{
+    padding: 43px 0 162px 0;
+    display: grid;
+    grid-template: 207px auto/ 225px auto;
+  }
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.col{
+  flex-direction: column;
+}
+
+a{
+  border-bottom: 1px $btn-green dotted;
+}

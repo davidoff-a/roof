@@ -1,0 +1,37 @@
+.header {
+  grid-column: 1/3;
+  &-promo {
+    height: 148px;
+  }
+}
+.about {
+  width: 205px;
+  height: 92px;
+  align-items: center;
+  &__block {
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    & span {
+      font-weight: 600;
+      line-height: 22px;
+    }
+  }
+}
+.nav {
+  padding-right: 25px;
+  margin-bottom: 37px;
+  height: 22px;
+  width: 100%;
+}
+.nav-menu {
+  margin-right: 30px;
+  &__item {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+}
