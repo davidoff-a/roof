@@ -38,12 +38,42 @@ export const handleSubmit = () => {
     const phoneNum = phoneInputEl?.value.match(/\d*/gi).join('');
     const regex9 = new RegExp(/(\d{3})(\d{2})(\d{2})(\d{2})/gi);
     const regex10 = new RegExp(/(\d{1})(\d{3})(\d{2})(\d{2})(\d{2})/gi);
-    if (phoneNum.length===9){
+    const policyAgree = document.querySelector('.policy__check');
+
+    if (!policyAgree.checked){
+      showInformer(`Данные не сохранены. Необходимо Ваше согласие на обработку личных данных`, "warn")
+    } else if (phoneNum.length===9){
       phoneInputEl.value = phoneNum.replace(regex9, "+7 ($1) $2 - $3 - $4")
-    }
-    if (phoneNum.length===10 && phoneNum[0]==="7"){
+      showInformer(`Данные успешно сохранены.\nСовсем скоро мы с Вами свяжемся по телефону \n ${phoneInputEl.value}`, "ok")
+    } else  if (phoneNum.length===10 && phoneNum[0]==="7"){
       phoneInputEl.value = phoneNum.replace(regex10, "+$1 ($2) - $3 - $4 - $5")
+      showInformer(`Данные успешно сохранены.\nСовсем скоро мы с Вами свяжемся по телефону \n ${phoneInputEl.value}`, "ok")
+    } else {
+      showInformer(`Данные не сохранены. Введено ${phoneNum.length}, а нужно 9 без кода страны, 10 - с кодом`, "warn")
     }
+
+
+
   })
 
+}
+
+const showInformer = (message, status) => {
+  const informer = document.querySelector('.message');
+  const state = {
+    warn: "message_warn",
+    ok: "message_success",
+  }
+  informer.style.display = "block";
+  const info = document.querySelector(".message__label");
+  info.textContent = message;
+
+  informer.classList.add(state[status]);
+
+  const showMessageTimer = setTimeout(()=>{
+
+    info.textContent = "";
+        informer.classList.remove(state[status]);
+        informer.style.display = "none";
+  }, 4000)
 }
