@@ -27,7 +27,9 @@
   position: relative;
   padding-left: 60px;
   &__link {
+    height: 25px;
     border-bottom: 4px $btn-green dotted;
+
   }
   &:before {
     content: "Pdf";
@@ -38,11 +40,11 @@
     top: 50%;
     border-radius: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(-50%);
+    transform: translateY(-55%);
     text-align: center;
     font-weight: 600;
     font-size: 11px;
-    line-height: 43px;
+    line-height: 50px;
     letter-spacing: 0.04em;
     color: $btn-green;
   }
@@ -61,6 +63,16 @@
     font-weight: 500;
     &:first-child {
       margin-right: 20px;
+    }
+  }
+  &__link{
+    background-image: linear-gradient($btn-orange, $btn-orange-hover);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    &:hover {
+      background-size: 100% 2px;
     }
   }
 }
