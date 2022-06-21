@@ -1,6 +1,13 @@
 @mixin pimp($color){
   @extend %button;
   background-color: $color;
+  &:hover{
+    @if($color == $btn-green){
+      background-color: $btn-green-hover;
+    } @else {
+      background-color: $btn-orange-hover;
+    }
+  }
   &:before{
     content: "";
     width: 20px;
@@ -10,7 +17,5 @@
     top: 50%;
     transform: translateY(-50%);
     background:url("../assets/img/btn_arrow.svg") center center/cover no-repeat;
-
-
   }
 }

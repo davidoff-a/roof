@@ -3,6 +3,7 @@
 }
 
 .promo {
+  margin-top: 70px;
   &__title {
     width: 728px;
     font-weight: 300;
@@ -43,9 +44,6 @@
     height: 100px;
     margin-top: 45px;
     justify-content: flex-start;
-  }
-  &__btn {
-    @include pimp($btn-green);
   }
 }
 

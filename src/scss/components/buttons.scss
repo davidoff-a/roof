@@ -1,7 +1,7 @@
 .btn {
   @include pimp($btn-green);
   &:nth-child(2n) {
-    background-color: $btn-orange;
+    @include pimp($btn-orange);
     margin-left: 18px;
   }
 }
