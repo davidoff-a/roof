@@ -51,11 +51,7 @@ export const handleSubmit = () => {
     } else {
       showInformer(`Данные не сохранены. Введено ${phoneNum.length}, а нужно 9 без кода страны, 10 - с кодом`, "warn")
     }
-
-
-
   })
-
 }
 
 const showInformer = (message, status) => {
@@ -71,7 +67,6 @@ const showInformer = (message, status) => {
   informer.classList.add(state[status]);
 
   const showMessageTimer = setTimeout(()=>{
-
     info.textContent = "";
         informer.classList.remove(state[status]);
         informer.style.display = "none";
