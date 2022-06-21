@@ -6,13 +6,21 @@ body {
   font-size: 14px;
   line-height: 140%;
 }
+.first{
+  width: 100vw;
+  height: 100vh;
+  background: url("../assets/img/main-bg.jpg") center center/cover no-repeat;
+
+}
 .container {
   width: 82vw;
   margin: 0 auto;
   &__grid {
-    padding: 43px 0 162px 0;
+    padding: 40px 0 80px 0;
     display: grid;
-    grid-template: 207px auto/ 225px auto;
+    grid-template: 180px auto/ 225px auto;
+    row-gap: 15px;
+    column-gap: 70px;
   }
 }
 .row {

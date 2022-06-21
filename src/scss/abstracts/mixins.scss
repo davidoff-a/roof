@@ -1,0 +1,16 @@
+@mixin pimp($color){
+  @extend %button;
+  background-color: $color;
+  &:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background:url("../assets/img/btn_arrow.svg") center center/cover no-repeat;
+
+
+  }
+}

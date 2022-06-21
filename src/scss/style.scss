@@ -1,4 +1,6 @@
 @import "abstracts/variables";
+@import "abstracts/placeholders";
+@import "abstracts/mixins";
 @import "base/reset";
 @import "base/fonts";
 @import "base/base";
@@ -6,3 +8,4 @@
 @import "components/header";
 @import "components/advantages";
 @import "components/main";
+@import "components/buttons";

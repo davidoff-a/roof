@@ -1,3 +1,36 @@
 .advantages {
   grid-column: 1/2;
+  padding: 75px 31px 31px 31px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  background-image: url("../assets/img/menu_bg.svg");
+  background-size: cover;
+  background-position: -30px -30px;
+  background-repeat: no-repeat;
+
+  &__list {
+    width: 100%;
+    height: 380px;
+  }
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 190px;
+        height: 54px;
+        background: url("../assets/img/menu_divider.png") center center/cover
+          no-repeat;
+      }
+    }
+    & span {
+      font-weight: 700;
+    }
+  }
 }

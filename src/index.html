@@ -1,110 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/css/style.min.css" />
-    <title>Кровельные материалы</title>
-  </head>
+  @@include("html/head.html", {"title": "Кровельные материалы"})
   <body>
-    <div class="container container__grid">
-      <header class="header">
-          <nav class="nav">
-            <ul class="nav-menu row">
-              <li class="nav-menu__item">
-                <img src="./assets/img/home.svg" alt="homepage" />
-              </li>
-              <li class="nav-menu__item">каталог</li>
-              <li class="nav-menu__item">Преимущества</li>
-              <li class="nav-menu__item">Примеры работ</li>
-              <li class="nav-menu__item">монтаж</li>
-              <li class="nav-menu__item">отзывы</li>
-              <li class="nav-menu__item">Ответы на вопросы</li>
-              <li class="nav-menu__item">контакты</li>
-            </ul>
-          </nav>
-          <ul class="header-promo row">
-            <li class="header-promo__item about row col">
-              <p class="about__block">
-                <span>Кровельные и фасадные материалы</span> в Тюмени и области
-              </p>
-              <p class="about__block">Профессиональный монтаж с 2010 года.</p>
-            </li>
-            <li class="header-promo__item">
-              <div class="price">
-                <a href="#" class="price__link">Скачать прайс-каталог</a>
-              </div>
-            </li>
-            <li class="header-promo__item">
-              <a href="#" class="logo__link"
-              ><img src="./assets/img/logo.svg" alt="logo" class="logo"
-              /></a>
-            </li>
-            <li class="header-promo__item">
-              <ul class="chats row col">
-                <li class="chats__item chats__label">
-                  Oтвечаем <span>онлайн</span>
-                </li>
-                <li class="chats__item chats__wrapper row">
-                    <a href="viber.com">
-                        <div
-                                class="chats__messenger chats__messenger_viber">
-                            <img src="assets/img/viber.svg"
-                                 alt="viber" class="chats__img"></div>
-                    </a>
-                    <a href="whatsup.com">
-                        <div
-                                class="chats__messenger chats__messenger_whatsup"><img src="assets/img/whatsup.svg"
-                                                                                       alt="whatsup" class="chats__img"></div>
-                    </a>
-                    <a href="telegram.com"><div class="chats__messenger chats__messenger_telegram"><img src="assets/img/telegram.svg"
-                                                                                                        alt="telegram" class="chats__img"></div></a>
-                </li>
-              </ul>
-            </li>
-            <li class="header-promo__item header-promo__item_schedule row col">
-              <div class="schedule"><span class="schedule__span">Пн-Пт</span> 9:00 - 18:00, <span
-                      class="schedule__span">Сб</span> 10:00 -
-                  18:00</div>
-              <a href="tel:88002225460" class="phone">8 (800) 222-54-60</a>
-              <a href="" class="phone__link">Позвоните мне</a>
-            </li>
-          </ul>
-      </header>
-      <aside class="advantages">
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <span>Гарантия от 50 лет</span> на материалы и 5 лет на монтаж
-          </li>
-          <li class="advantages__item">
-            <span>Замер, монтажный проект</span> и еще 4 услуги бесплатно
-          </li>
-          <li class="advantages__item"><span>Сметы точны</span> до копейки</li>
-          <li class="advantages__item">
-            <span>Поэтапная оплата </span>, кредит или рассрочка
-          </li>
-          <li class="advantages__item">
-            <span>Наши крыши в каждом поселке</span> и дачном сообществе региона
-          </li>
-        </ul>
-      </aside>
-      <main class="main">
-        <div class="promo">
-          <h2 class="promo__title"></h2>
-          <div class="promo__controls"></div>
-          <div class="promo__slogan"></div>
-          <promo__btns></promo__btns>
-          <div class="promo__gift">
-            Ответьте на несколько вопросов и получите сметную стоимость и 3
-            подарка за экономию нашего времени
-          </div>
-        </div>
-      </main>
-    </div>
+    <section class="first">
+      <div class="container container__grid">
+        @@include("html/header.html", {})
+        @@include("html/sidepanel.html", {})
+        @@include("html/main.html", {})
+      </div>
+    </section>
     <script src="js/app.min.js"></script>
   </body>
 </html>
