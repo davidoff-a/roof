@@ -1,5 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
-import Swiper, {Navigation, Pagination} from "swiper";
-// const swiper
+import * as modalHandlers from "./modules/script.js";
+import { showModal } from "./modules/script.js";
 
 flsFunctions.isWebp();
+modalHandlers.showModal();
+modalHandlers.handleModalClose(modalHandlers.selectors);
