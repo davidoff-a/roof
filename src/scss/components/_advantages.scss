@@ -7,13 +7,13 @@
   text-align: center;
   background-image: url("../assets/img/menu_bg.svg");
   background-size: cover;
-  background-position: -30px -30px;
+  background-position: center center;
   background-repeat: no-repeat;
 
   &__list {
     width: 100%;
     padding: 0 20px;
-    height: 380px;
+    height: 510px;
   }
   &__item {
     position: relative;
@@ -22,7 +22,7 @@
       &:after {
         content: "";
         position: absolute;
-        bottom: -60px;
+        bottom: -68px;
         left: 50%;
         transform: translateX(-50%);
         width: 190px;
