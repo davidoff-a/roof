@@ -8,55 +8,64 @@
     font-weight: 300;
     font-size: 55px;
     line-height: 85px;
-    & span{
+    & span {
       font-weight: 600;
     }
   }
-  &__wrapper{
+  &__wrapper {
     width: 397px;
     margin-top: 19px;
   }
-  &__controls{
+  &__controls {
     width: 58px;
   }
-  &__circles{
+  &__circles {
     width: 10px;
     height: 10px;
     border-radius: 100%;
     border: 3px solid $btn-green;
+    &:nth-child(2) {
+      border-color: rgba(18, 200, 104, 0.8);
+    }
+    &:nth-child(3) {
+      border-color: rgba(18, 200, 104, 0.6);
+    }
+    &:nth-child(4) {
+      border-color: rgba(18, 200, 104, 0.4);
+    }
   }
-  &__slogan{
+  &__slogan {
     font-weight: 400;
     font-size: 32px;
     line-height: 39px;
   }
-  &__btns{
+  &__btns {
     height: 100px;
     margin-top: 45px;
     justify-content: flex-start;
   }
-  &__btn{
-    @include pimp($btn-green)
+  &__btn {
+    @include pimp($btn-green);
   }
 }
 
-.survey{
+.survey {
   position: relative;
   margin-top: 38px;
   padding-left: 32px;
   width: 270px;
   min-height: 88px;
   text-align: center;
-  &:before{
-    content: '';
+  &:before {
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 26px;
     height: 20px;
-    background: url("../assets/img/hand.svg")center center/cover no-repeat;
+    background: url("../assets/img/hand.svg") center center/cover no-repeat;
   }
-  & span{
+  & span {
     font-weight: 600;
   }
 }
