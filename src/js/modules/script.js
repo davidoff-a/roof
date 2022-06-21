@@ -24,6 +24,8 @@ export const handleModalClose = (data) => {
       const target = e.target;
       if (e && target.classList.contains(className.slice(1))) {
         closeModal();
+      } else if (e && target.closest(".modal__close")){
+        closeModal()
       }
     });
   });
